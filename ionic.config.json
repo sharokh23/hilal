@@ -1,0 +1,8 @@
+{
+  "name": "hilal",
+  "app_id": "63a8e7b1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
