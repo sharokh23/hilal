@@ -44,7 +44,7 @@ export class NewSightingPage {
 
   deletePhoto(index) {
     let confirm = this.alertCtrl.create({
-        title: 'Sure you want to delete this photo? There is NO undo!',
+        title: 'Sure you want to delete this photo? There is NO reversal!',
         message: '',
         buttons: [
           {
