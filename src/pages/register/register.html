@@ -1,0 +1,86 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <p class="error">{{ error }}</p>
+
+  <ion-item>
+    <ion-label stacked>First Name</ion-label>
+    <ion-input type='text' [(ngModel)]="first_name" name="first_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Last Name</ion-label>
+    <ion-input type='text' [(ngModel)]="last_name" name="last_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Phone</ion-label>
+    <ion-input type="tel" [(ngModel)]="phone_number" name="phone_number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)]="confirm_password" name="confirm_password"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="sex">
+            <ion-option value="male">Male</ion-option>
+            <ion-option value="female">Female</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label>Role</ion-label>
+          <ion-select [(ngModel)]="role">
+            <ion-option value="observer">Observer</ion-option>
+            <ion-option value="verifier">Verifier</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Affiliation</ion-label>
+          <ion-select [(ngModel)]="affiliation">
+            <ion-option value="jafari">Jafari</ion-option>
+            <ion-option value="ismaeli">Ismaeli</ion-option>
+            <ion-option value="hanafi">Hanafi</ion-option>
+            <ion-option value="hanbali">Hanbali</ion-option>
+            <ion-option value="maliki">Maliki</ion-option>
+            <ion-option value="shafii">Shafi'i</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button ion-button color="secondary" full (click)="register()">Register</button>
+
+</ion-content>
