@@ -21,8 +21,8 @@
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <ion-card *ngFor="let sighting of sightings">
-      <img height="250px" src='{{ sighting.image }}'/>
+    <ion-card *ngFor="let sighting of sightings" >
+      <img height="250px" src='{{ sighting.image }}' (click)="SightingClicked(sighting)"/>
       <div class="card-title">{{sighting.city}}, {{sighting.state}}</div>
       <div class="card-subtitle">{{sighting.first_name}} {{sighting.last_name}}</div>
     </ion-card>

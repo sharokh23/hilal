@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { LoginPage } from '../login/login';
+import { SightingPage } from '../sighting/sighting';
 import { NewSightingPage } from '../newsighting/newsighting';
 import { SightingsProvider } from '../../providers/sightings/sightings';
 
@@ -46,6 +47,10 @@ export class HomePage {
       console.log('Async operation has ended');
       refresher.complete();
     }, 2000);
+  }
+
+  SightingClicked(sighting) {
+    this.navCtrl.push(SightingPage, sighting);
   }
 
 }
